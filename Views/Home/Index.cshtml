@@ -1,0 +1,260 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Communities</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .communities-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 2px;
+        }
+
+        .community-card {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .community-card:hover {
+                transform: scale(1.05);
+            }
+
+        .community-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .community-content {
+            padding: 16px;
+        }
+
+        .community-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .community-description {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .review-container {
+            max-width: 1500px; /* Adjust the max-width if needed */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap; /* Allow reviews to wrap to the next line */
+            justify-content: space-around; /* Adjust as needed */
+        }
+
+        .user-review {
+            width: 45%; /* Adjust the width as needed */
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-avatar {
+            width: 40px; /* Adjust the width as needed */
+            height: 40px; /* Adjust the height as needed */
+            border-radius: 50%;
+            margin-right: 15px;
+            overflow: auto;
+        }
+
+        .user-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .user-details {
+            flex-grow: 1;
+        }
+
+            .user-details h3 {
+                margin: 0;
+                color: #333;
+            }
+
+            .user-details p {
+                margin: 5px 0 0;
+                color: #666;
+            }
+
+        .user-review .rating {
+            display: flex;
+            align-items: center;
+        }
+
+        .star {
+            color: #f39c12;
+        }
+
+        .review-text {
+            margin-top: 2px;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="communities-container" style="margin-top: 1px">
+        <!-- Microsoft Community -->
+        <div class="community-card">
+            <img class="community-image" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true" alt="Microsoft Community Image">
+            <div class="community-content">
+                <div class="community-title">Microsoft Community</div>
+                <div class="community-description">For enthusiasts and professionals using Microsoft technologies.</div>
+            </div>
+        </div>
+
+        <div class="community-card">
+            <img class="community-image" src="https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo.png" alt="Amazon Community Image">
+            <div class="community-content">
+                <div class="community-title">Amazon Community</div>
+                <div class="community-description">Connecting individuals passionate about Amazon Web Services (AWS).</div>
+            </div>
+        </div>
+
+        <!-- Google Community -->
+        <div class="community-card">
+            <img class="community-image" src="https://w7.pngwing.com/pngs/523/198/png-transparent-google-logo-google-search-google-play-google-text-logo-number-thumbnail.png" alt="Google Community Image">
+            <div class="community-content">
+                <div class="community-title">Google Community</div>
+                <div class="community-description">For those exploring and working with Google Cloud Platform (GCP).</div>
+            </div>
+        </div>
+
+
+
+        <div class="review-container" style="margin-top: 2px">
+            <!-- User Review 1 -->
+            <div class="user-review">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4NAwrInfpEhTT3Kti5eMA6/e5e7a301fc824d01dda224830a065135/GettyImages-1341554760.jpg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000&h=" alt="User 1">
+                    </div>
+                    <div class="user-details">
+                        <h3>John Doe</h3>
+                        <p>Web Developer</p>
+                    </div>
+                </div>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <div class="review-text">
+                    <p>Great product! I love it.</p>
+                </div>
+            </div>
+
+            <!-- User Review 2 -->
+            <div class="user-review">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://howafrica.com/wp-content/uploads/2023/02/Byron-Jenkins.jpg" alt="User 2">
+                    </div>
+                    <div class="user-details">
+                        <h3>Jane Smith</h3>
+                        <p>Designer</p>
+                    </div>
+                </div>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                </div>
+                <div class="review-text">
+                    <p>Excellent service. Will recommend to others.</p>
+                </div>
+            </div>
+
+            <!-- User Review 4 -->
+            <div class="user-review">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://franklincummings.edu/wp-content/uploads/2022/05/Software-developer_male.jpg" alt="User 2">
+                    </div>
+                    <div class="user-details">
+                        <h3>Joe</h3>
+                        <p>Analyst</p>
+                    </div>
+                </div>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">☆</span>
+                    <span class="star">☆</span>
+                </div>
+                <div class="review-text">
+                    <p>Great product! Excellent service. Will recommend to others.</p>
+                </div>
+            </div>
+
+            <!-- User Review 4 -->
+            <div class="user-review">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4NAwrInfpEhTT3Kti5eMA6/e5e7a301fc824d01dda224830a065135/GettyImages-1341554760.jpg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000&h=" alt="User 1">
+                    </div>
+                    <div class="user-details">
+                        <h3>John Doe</h3>
+                        <p>Web Developer</p>
+                    </div>
+                </div>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <div class="review-text">
+                    <p>Great product! I love it.</p>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

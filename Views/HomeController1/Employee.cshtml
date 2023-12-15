@@ -1,0 +1,73 @@
+﻿@model IEnumerable<AspnetidentityRoleBased.Models.EmployeeViewModelcs>
+@{
+    ViewBag.Title = "Employee";
+    //Layout = null;
+}
+
+<script src="~/js/jquery-1.10.2.min.js"></script>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<div class="container" style="width:40%;margin-top:2%">
+
+
+    <table class="table table-responsive">
+        <tr>
+            <th>EmployeeId</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th></th>
+        </tr>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.EmployeeId</td>
+                    <td>@item.Name</td>
+                    <td>@item.Address</td>
+                    <td><a href="#" class="btn btn-success" onclick="AddEditEmployee(@item.EmployeeId)"><i class="glyphicon glyphicon-pencil"></i> </a> </td>
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+    <a href="#" class="btn btn-primary" onclick="AddEditEmployee(0)">New</a>
+
+
+    <div class="modal fade" id="myModal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">AddEdit Employee</h3>
+                    <a href="#" class="close" data-dismiss="modal">&times;</a>
+                </div>
+                <div class="modal-body" id="myModalBodyDiv1">
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <input type="hidden" id="hiddenEmployeeId" />
+
+
+</div>
+
+<script>
+
+    var AddEditEmployee = function (employeeId) {
+
+        var url = "/Home/AddEditEmployee?EmployeeId=" + employeeId;
+
+        $("#myModalBodyDiv1").load(url, function () {
+            $("#myModal1").modal("show");
+
+        })
+
+    }
+</script>

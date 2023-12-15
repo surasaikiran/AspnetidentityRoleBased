@@ -1,0 +1,97 @@
+﻿@{
+    ViewData["Title"] = "Communities";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Communities</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .communities-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .community-card {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .community-card:hover {
+                transform: scale(1.05);
+            }
+
+        .community-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .community-content {
+            padding: 16px;
+        }
+
+        .community-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .community-description {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="communities-container">
+        <!-- Microsoft Community -->
+        <div class="community-card">
+            <img class="community-image" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWCZER?ver=1433&q=90&m=6&h=195&w=348&b=%23FFFFFFFF&l=f&o=t&aim=true" alt="Microsoft Community Image">
+            <div class="community-content">
+                <div class="community-title">Microsoft Community</div>
+                <div class="community-description">For enthusiasts and professionals using Microsoft technologies.</div>
+            </div>
+        </div>
+
+        <!-- Amazon Community -->
+        <div class="community-card">
+            <img class="community-image" src="https://1000logos.net/wp-content/uploads/2016/10/Amazon-Logo.png" alt="Amazon Community Image">
+            <div class="community-content">
+                <div class="community-title">Amazon Community</div>
+                <div class="community-description">Connecting individuals passionate about Amazon Web Services (AWS).</div>
+            </div>
+        </div>
+
+        <!-- Google Community -->
+        <div class="community-card">
+            <img class="community-image" src="https://w7.pngwing.com/pngs/523/198/png-transparent-google-logo-google-search-google-play-google-text-logo-number-thumbnail.png" alt="Google Community Image">
+            <div class="community-content">
+                <div class="community-title">Google Community</div>
+                <div class="community-description">For those exploring and working with Google Cloud Platform (GCP).</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

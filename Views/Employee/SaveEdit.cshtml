@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "SaveEdit";
+}
+
+
+<h1>Edit Employee</h1>
+
+@using (Html.BeginForm("SaveEdit", "Employee", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label for="Name">Name:</label>
+        <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="DepartmentId">Department:</label>
+        @Html.DropDownList("DepartmentId", (SelectList)ViewBag.DepartmentList, new { @class = "form-control", required = "required" })
+    </div>
+
+    <div class="form-group">
+        <label for="Address">Address:</label>
+        <input type="text" class="form-control" id="Address" name="Address" value="@Model.Address" required>
+    </div>
+
+    <input type="hidden" id="EmployeeId" name="EmployeeId" value="@Model.EmployeeId">
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+}
+
+@section scripts {
+    <!-- Add any additional scripts if needed -->
+}
